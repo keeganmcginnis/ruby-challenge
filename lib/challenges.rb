@@ -7,4 +7,5 @@ def add_example(a, b)
 end
 
 def multiply(a,b)
+	return a * b
 end
