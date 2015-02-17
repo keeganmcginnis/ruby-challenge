@@ -18,3 +18,9 @@ describe "A method named 'multiply'" do
     expect(multiply(-3,4)).to eq(-12)
   end
 end
+
+describe "A method named 'say_hello'" do
+  it "Uses 'puts' to print three lines of text, all of which are 'hello'" do
+    expect{say_hello}.to output("hello\nhello\nhello\n").to_stdout
+  end
+end
