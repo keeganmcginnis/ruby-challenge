@@ -24,3 +24,11 @@ describe "A method named 'say_hello'" do
     expect{say_hello}.to output("hello\nhello\nhello\n").to_stdout
   end
 end
+
+describe "A class named Dog" do
+  describe "A method named 'bark'" do
+    it "returns the string 'WOOF!" do
+      expect(Dog.bark).to eq('WOOF!')
+    end
+  end
+end
