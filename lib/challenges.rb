@@ -1,3 +1,4 @@
+############  Lesson #1 ##############
 def example_method
   return 'This is an example method'
 end
@@ -15,11 +16,18 @@ def say_hello
 end 
 
 
-
-
 class Dog
 
 	def self.bark
 		return ("WOOF!")
 	end
+
+	def growl
+		return ("grrr")
+		
+	end
 end
+
+growl = Dog.new
+
+growl.growl
