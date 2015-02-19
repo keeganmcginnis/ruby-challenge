@@ -17,17 +17,11 @@ end
 
 
 class Dog
-
 	def self.bark
 		return ("WOOF!")
 	end
 
 	def growl
 		return ("grrr")
-		
 	end
 end
-
-growl = Dog.new
-
-growl.growl
