@@ -44,3 +44,11 @@ describe "A class named Dog" do
     end
   end
 end
+
+describe "A method named 'make_dog'" do
+  it "returns a new instance of Dog" do
+    dog = make_dog
+    expect(dog.class).to eq(Dog)
+    expect(dog.growl).to eq('grrr')
+  end
+end
