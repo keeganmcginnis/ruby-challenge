@@ -37,4 +37,10 @@ describe "A class named Dog" do
       expect(Dog.new.growl).to eq('grrr')
     end
   end
+
+  describe "An class constant named NUMBER_OF_LEGS" do
+    it "equals 4" do
+      expect(Dog::NUMBER_OF_LEGS).to eq(4)
+    end
+  end
 end
