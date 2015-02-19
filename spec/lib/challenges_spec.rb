@@ -27,7 +27,7 @@ end
 
 describe "A class named Dog" do
   describe "A method named 'bark'" do
-    it "returns the string 'WOOF!" do
+    it "returns the string 'WOOF!'" do
       expect(Dog.bark).to eq('WOOF!')
     end
   end

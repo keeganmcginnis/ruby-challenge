@@ -9,3 +9,17 @@ end
 def multiply(a,b)
 	return a * b
 end
+
+def say_hello
+	3.times {puts "hello"}
+end 
+
+
+
+
+class Dog
+
+	def self.bark
+		return ("WOOF!")
+	end
+end
