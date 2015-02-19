@@ -26,9 +26,15 @@ describe "A method named 'say_hello'" do
 end
 
 describe "A class named Dog" do
-  describe "A method named 'bark'" do
+  describe "A class method named 'bark'" do
     it "returns the string 'WOOF!'" do
       expect(Dog.bark).to eq('WOOF!')
+    end
+  end
+
+  describe "An instance method named 'growl'" do
+    it "returns the string 'grrr'" do
+      expect(Dog.new.growl).to eq('grrr')
     end
   end
 end
