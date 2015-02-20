@@ -15,22 +15,20 @@ def say_hello
 	3.times {puts "hello"}
 end 
 
-
 class Dog
-	def self.bark
-		return ("WOOF!")
-	end
+  def self.bark
+	  return ("WOOF!")
+  end
 
-	def growl
-		return ("grrr")
-	end
-
+  def growl
+      return ("grrr")
+  end
+  
 	NUMBER_OF_LEGS = 4
 end
 
 def make_dog
-	Dog.new()
-	
+	Dog.new()	
 end
 
 
