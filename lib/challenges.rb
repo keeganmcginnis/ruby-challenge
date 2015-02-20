@@ -21,7 +21,6 @@ class Dog
 		return ("WOOF!")
 	end
 
-	def growl
-		return ("grrr")
-	end
+	
 end
+

@@ -41,7 +41,7 @@ describe "A class named Dog" do
   describe "An class constant named NUMBER_OF_LEGS" do
     it "equals 4" do
       expect(Dog::NUMBER_OF_LEGS).to eq(4)
-    end
+    enda
   end
 end
 
