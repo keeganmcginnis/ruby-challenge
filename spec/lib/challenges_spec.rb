@@ -57,5 +57,6 @@ end
 describe "A class named Cat" do
   it "is initialized by passing a 'name' argument that can be accessed through an instance method named 'name', which returns an instance variable named 'name'" do
     expect(Cat.new('Duffy').name).to eq('Duffy')
+    expect(Cat.new('Baby').name).to eq('Baby')
   end
 end
