@@ -29,3 +29,13 @@ end
 def make_dog
 	Dog.new()	
 end
+
+class Cat
+	def initialize(name)
+		@name = "Duffy"	
+	end
+
+	def name
+		return @name
+	end
+end
