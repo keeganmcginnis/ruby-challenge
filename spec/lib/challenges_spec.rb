@@ -43,6 +43,7 @@ describe "A class named Dog" do
       expect(Dog::NUMBER_OF_LEGS).to eq(4)
     end
   end
+
 end
 
 describe "A method named 'make_dog'" do
@@ -50,5 +51,11 @@ describe "A method named 'make_dog'" do
     dog = make_dog
     expect(dog.class).to eq(Dog)
     expect(dog.growl).to eq('grrr')
+  end
+end
+
+describe "A class named Cat" do
+  it "is initialized by passing a 'name' argument that can be accessed through an instance method named 'name', which returns an instance variable named 'name'" do
+    expect(Cat.new('Duffy').name).to eq('Duffy')
   end
 end

@@ -1,4 +1,3 @@
-############  Lesson #1 ##############
 def example_method
   return 'This is an example method'
 end
@@ -30,6 +29,3 @@ end
 def make_dog
 	Dog.new()	
 end
-
-
-
