@@ -21,6 +21,17 @@ class Dog
 		return ("WOOF!")
 	end
 
+	def growl
+		return ("grrr")
+	end
+
+	NUMBER_OF_LEGS = 4
+end
+
+def make_dog
+	Dog.new()
 	
 end
+
+
 
