@@ -86,7 +86,7 @@ describe "A method named 'add_arrays'" do
 end
 
 describe "A method named 'subtract_arrays" do
-  it "should take an array and a number as arguments and create a new array built by concatenating <number> copies of the array" do
+  it "should take two arrays as arguments and returns a new array that is a copy of array 1, removing any items that also appear in array 2" do
     a1 = [1,2,3]
     a2 = [2,3]
     expect(subtract_arrays(a1, a2)).to match_array([1])
@@ -102,6 +102,17 @@ describe "A method named 'multiply_array'" do
     expect(multiply_array(array, 3)).to match_array([1,2,3,1,2,3,1,2,3])
     array = [7,8]
     expect(multiply_array(array, 4)).to match_array([7,8,7,8,7,8,7,8])
+  end
+end
+
+describe "A method named 'array_intersection'" do
+  it "should take two arrays as arguments and return a new array containing elements common to the two arrays, excluding any duplicates." do
+    a1 = [1,2,3]
+    a2 = [3]
+    expect(array_intersection(a1, a2)).to match_array([3])
+    a1 = [7,8,7,8,9,9,10]
+    a2 = [9,10]
+    expect(array_intersection(a1, a2)).to match_array([9,10])
   end
 end
 
