@@ -73,6 +73,14 @@ describe "A class named Cat" do
   end
 end
 
+describe "A method named 'add_arrays'" do
+  # HINT: http://ruby-doc.org/core-2.2.0/Array.html
+  it "should take two arrays as arguments and combine them into one array" do
+    array_one = [1,2,3,4,5]
+    array_two = [1,2,3]
+    expect(add_arrays(array_one, array_two)).to match_array([1,1,2,2,3,3,4,5])
+  end
+end
 
 
 
