@@ -32,10 +32,24 @@ end
 
 class Cat
 	def initialize(name)
-		@name = "Duffy"	
+		@name = name
 	end
 
 	def name
 		return @name
+	end
+
+	def noise
+		return "meow"
+	end
+
+	def legs
+		4
+	end
+
+  private
+
+	def breathe
+		 true
 	end
 end

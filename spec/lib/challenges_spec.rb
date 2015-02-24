@@ -59,4 +59,22 @@ describe "A class named Cat" do
     expect(Cat.new('Duffy').name).to eq('Duffy')
     expect(Cat.new('Baby').name).to eq('Baby')
   end
+
+  it "Should be able to meow" do
+    expect(Cat.new('Floyd').noise).to eq('meow')
+  end
+
+  it "Should have four legs." do
+    expect(Cat.new('Floyd').legs).to eq(4)
+  end
+
+  it "Should have a private method called 'breathe'" do
+    expect{Cat.new('Floyd').breathe}.to raise_error(NoMethodError)
+  end
 end
+
+
+
+
+
+
