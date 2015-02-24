@@ -85,7 +85,13 @@ describe "A method named 'add_arrays'" do
   end
 end
 
-
-
-
-
+describe "A method named 'subtract_arrays" do
+  it "should take an array and a number as arguments and create a new array built by concatenating <number> copies of the array" do
+    a1 = [1,2,3]
+    a2 = [2,3]
+    expect(subtract_arrays(a1, a2)).to match_array([1])
+    a1 = [1,2,3]
+    a2 = [3]
+    expect(subtract_arrays(a1, a2)).to match_array([1,2])
+  end
+end
