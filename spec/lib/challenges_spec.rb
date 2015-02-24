@@ -79,6 +79,9 @@ describe "A method named 'add_arrays'" do
     array_one = [1,2,3,4,5]
     array_two = [1,2,3]
     expect(add_arrays(array_one, array_two)).to match_array([1,1,2,2,3,3,4,5])
+    array_one = [7,8]
+    array_two = [7,9,10]
+    expect(add_arrays(array_one, array_two)).to match_array([7,7,8,9,10])
   end
 end
 

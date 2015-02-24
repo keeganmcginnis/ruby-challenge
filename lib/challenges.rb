@@ -53,3 +53,7 @@ class Cat
      true
   end
 end
+
+def add_arrays(a1, a2)
+  a1 + a2
+end
