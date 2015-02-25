@@ -145,3 +145,21 @@ describe "A method named whisper" do
     expect(whisper(%w(OUCH THAT HURT))).to eq("ouch that hurt")
   end
 end
+
+describe "A method named add_em_up" do
+  it "should add together all of the elements of an array" do
+    expect(add_em_up([1,2,3,4,5])).to eq(15)
+  end
+end
+
+describe "A method named reverse_each_word" do
+  it "should return the elements of an array as a single string with each word spelled backwards" do
+    expect(reverse_each_word(%w(may the force be with you))).to eq('yam eht ecrof eb htiw uoy')
+  end
+end
+
+describe "A method named reverse_the_sentence" do
+  it "should accept a string as an argument and return the string with the words in reverse order" do
+    expect(reverse_the_sentence(%w(may the force be with you))).to eq('you with be force the may')
+  end
+end
