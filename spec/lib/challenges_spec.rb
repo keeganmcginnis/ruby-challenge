@@ -153,8 +153,8 @@ describe "A method named add_em_up" do
 end
 
 describe "A method named reverse_each_word" do
-  it "should return the elements of an array as a single string with each word spelled backwards" do
-    expect(reverse_each_word(%w(may the force be with you))).to eq('uoy htiw eb ecrof eht yam')
+  it "should return the elements of an array as a single string with each word spelled backwards, in the original order" do
+    expect(reverse_each_word(%w(may the force be with you))).to eq('yam eht ecrof eb htiw uoy')
   end
 end
 
