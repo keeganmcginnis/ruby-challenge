@@ -57,3 +57,31 @@ end
 def add_arrays(a1, a2)
   a1 + a2
 end
+
+def subtract_arrays(a1, a2)
+  a1 - a2  
+end
+
+def multiply_array(a1, a2)
+  a1 * a2
+end
+
+def array_intersection(a1, num)
+  a1 & num
+end
+
+def say_word(english)
+  english.each{|x| puts x}
+end
+
+def first_three(array)
+  nums = array.first(3)
+end
+
+def shout(words)
+  puts words.join(" ").upcase + "!"  
+end
+
+def whisper(soft_words)
+  soft_words.join(" ").downcase  
+end

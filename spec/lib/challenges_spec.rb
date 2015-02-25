@@ -140,7 +140,7 @@ end
 
 describe "A method named whisper" do
   # HINT: http://ruby-doc.org/core-2.2.0/String.html
-  it "should concatenate each element of an array strings and return it as a single string, all lower case" do
+  it "should concatenate each element of an array strings and returns it as a single string, all lower case" do
     expect(whisper(%w(WHAT THE FRENCH TOAST ARE YOU DOING?))).to eq("what the french toast are you doing?")
     expect(whisper(%w(OUCH THAT HURT))).to eq("ouch that hurt")
   end
