@@ -116,3 +116,32 @@ describe "A method named 'array_intersection'" do
   end
 end
 
+describe "A method named say_word" do
+  it "should take an array of strings as an argument and output a new line containing each word, in order" do
+    expect{say_word(['knock knock', "who's there", 'impatient cow', 'impatient cow...', 'MOO!'])}.to output("knock knock\nwho's there\nimpatient cow\nimpatient cow...\nMOO!\n").to_stdout
+    expect{say_word(['Hey', 'You', 'Get', 'Outta', 'My', 'Car'])}.to output("Hey\nYou\nGet\nOutta\nMy\nCar\n").to_stdout
+  end
+end
+
+describe "A method named first_three" do
+  it "should return an array containing the first three elements of the array passed" do
+    expect(first_three([1,2,3,4])).to contain_exactly(1,2,3)
+    expect(first_three(['a','b','c','d','e'])).to contain_exactly('a','b','c')
+  end
+end
+
+describe "A method named shout" do
+  # HINT: http://ruby-doc.org/core-2.2.0/String.html
+  it "should concatenate each element of an array of strings and puts them as a single line, all upper case, followed by an exclamation point" do
+    expect{shout(['what', 'the', 'french', 'toast', 'are', 'you', 'doing?'])}.to output("WHAT THE FRENCH TOAST ARE YOU DOING?!\n").to_stdout
+    expect{shout(['ouch', 'that', 'hurt'])}.to output("OUCH THAT HURT!\n").to_stdout
+  end
+end
+
+describe "A method named whisper" do
+  # HINT: http://ruby-doc.org/core-2.2.0/String.html
+  it "should concatenate each element of an array strings and return it as a single string, all lower case" do
+    expect(whisper(%w(WHAT THE FRENCH TOAST ARE YOU DOING?))).to eq("what the french toast are you doing?")
+    expect(whisper(%w(OUCH THAT HURT))).to eq("ouch that hurt")
+  end
+end
