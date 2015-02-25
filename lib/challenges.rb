@@ -85,3 +85,15 @@ end
 def whisper(soft_words)
   soft_words.join(" ").downcase  
 end
+
+def add_em_up(ints)
+   ints.inject(:+)
+end
+
+def reverse_each_word(reverse_words)
+  rev_words = reverse_words.join(" ").reverse()
+end
+
+def reverse_the_sentence(sentence)
+  sentence.reverse.join(" ")
+end
