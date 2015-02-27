@@ -161,5 +161,57 @@ end
 describe "A method named reverse_the_sentence" do
   it "should accept a string as an argument and return the string with the words in reverse order" do
     expect(reverse_the_sentence(%w(may the force be with you))).to eq('you with be force the may')
+    expect(reverse_the_sentence(%w(i like catz))).to eq('catz like i')
+  end
+end
+
+describe "A method named sort_alphabetically_ascending" do
+  it "should return an array sorted alphabetically ascending" do
+    expect(sort_alphabetically_ascending(%w(f e b c a d))).to eq(%w(a b c d e f))
+    expect(sort_alphabetically_ascending(%w(z a y b))).to eq(%w(a b y z))
+  end
+end
+
+
+describe "A method named sort_alphabetically_descending" do
+  it "should return an array sorted alphabetically descending" do
+    expect(sort_alphabetically_descending(%w(f e b c a d))).to eq(%w(f e d c b a))
+    expect(sort_alphabetically_descending(%w(x y z))).to eq(%w(z y x))
+  end
+end
+
+describe "A method named make_unique" do
+  it "should return an array with duplicate elements removed" do
+    expect(make_unique(%w(a a b b c c))).to eq(%w(a b c))
+    expect(make_unique(%w(x y x y z))).to eq(%w(x y z))
+  end
+end
+
+describe "A method named remove_nils" do
+  it "should return an array with nil values removed" do
+    expect(remove_nils(['a', nil, 'b', nil, 'c'])).to match_array(%w(a b c))
+    expect(remove_nils(['x', nil, nil, 'y', nil, nil, 'z'])).to match_array(%w(z x y))
+  end
+end
+
+describe "A method named elements_in" do
+  it "should return the number of elememts in an array" do
+    expect(elements_in(%w(a b c d))).to eq(4)
+    expect(elements_in(%w(1 2 3 4 5 6))).to eq(6)
+  end
+end
+
+describe "A method named evens" do
+  it "returns an array with odd numbers removed" do
+    expect(evens([1,2,3,4,5,6,7])).to match_array([2,4,6])
+    expect(evens([9,8,7,6,5,4])).to match_array([4,6,8])
+  end
+end
+
+
+describe "A method named evens_greater_than_10" do
+  it "returns an array with odd numbers and numbers less than 10 removed" do
+    expect(evens_greater_than_10([1,2,3,10,11,12,13])).to match_array([10,12])
+    expect(evens_greater_than_10([7,8,9,13,15,18])).to match_array([18])
   end
 end
