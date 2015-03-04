@@ -91,9 +91,39 @@ def add_em_up(ints)
 end
 
 def reverse_each_word(reverse_words)
-  rev_words = reverse_words.join(" ").reverse()
+  reverse_words.reverse.each{|x| puts x}
 end
 
 def reverse_the_sentence(sentence)
   sentence.reverse.join(" ")
+end
+
+def sort_alphabetically_ascending(letters)
+  letters.sort
+end
+
+def sort_alphabetically_descending(letters)
+  letters.sort.reverse
+end
+
+def make_unique(letters)
+  letters.uniq
+end
+
+def remove_nils(array)
+  array.compact
+end
+
+def elements_in(array)
+  array.count
+end
+
+def evens(numbers)
+  numbers.delete_if &:odd?
+end
+
+def evens_greater_than_10(number)
+  if number.length > 10
+     number.to_a
+  end
 end
