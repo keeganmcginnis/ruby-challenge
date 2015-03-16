@@ -12,7 +12,7 @@ end
 
 def say_hello
   3.times {puts "hello"}
-end 
+end
 
 class Dog
   def self.bark
@@ -22,7 +22,7 @@ class Dog
   def growl
       return ("grrr")
   end
-  
+
   NUMBER_OF_LEGS = 4
 end
 
@@ -59,7 +59,7 @@ def add_arrays(a1, a2)
 end
 
 def subtract_arrays(a1, a2)
-  a1 - a2  
+  a1 - a2
 end
 
 def multiply_array(a1, a2)
@@ -79,11 +79,11 @@ def first_three(array)
 end
 
 def shout(words)
-  puts words.join(" ").upcase + "!"  
+  puts words.join(" ").upcase + "!"
 end
 
 def whisper(soft_words)
-  soft_words.join(" ").downcase  
+  soft_words.join(" ").downcase
 end
 
 def add_em_up(ints)
@@ -91,7 +91,10 @@ def add_em_up(ints)
 end
 
 def reverse_each_word(reverse_words)
-  reverse_words.reverse.each{|x| puts x}
+  correct_words = []
+  reverse_words.each{|x| correct_words.push(x.reverse)}
+
+  return correct_words.join(" ")
 end
 
 def reverse_the_sentence(sentence)
@@ -122,8 +125,8 @@ def evens(numbers)
   numbers.delete_if &:odd?
 end
 
-def evens_greater_than_10(number)
-  if number.length > 10
-     number.to_a
+def evens_greater_than_10(numbers)
+  numbers.delete_if do |x|
+    x < 10 || x.odd?
   end
 end
